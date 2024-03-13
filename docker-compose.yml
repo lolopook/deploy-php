@@ -1,0 +1,36 @@
+# docker-compose.yml
+version: "3.8"
+
+services:
+  php-apache:
+    container_name: php-apache
+    ports:
+      - 8000:80
+    volumes:
+      - ./code:/var/www/html
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  database:
+    image: mysql:8.0 # image
+    container_name: mysql8 # nom du conteneur
+    command: --default-authentication-plugin=mysql_native_password # commande mysql complèmentaire pour le mot de passe
+    ports: # port d'accès aux bases de données
+      - 3307:3306
+    environment: # variables d'environnement
+      MYSQL_ROOT_PASSWORD: root # mot de passe root
+      MYSQL_DATABASE: docker_DB # nom de la base de données
+      MYSQL_USER: user # utilisateur de la base de données
+      MYSQL_PASSWORD: pass # mot de passe de l'utilisateur
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin # image
+    container_name: phpmyadmin # nom du conteneur
+    environment: # variables d'environnement
+      - PMA_ARBITRARY=1 # autorisation d'accès
+      - PMA_HOST=mysql8 # nom du conteneur
+      - PMA_USER=user # utilisateur
+      - PMA_PASSWORD=pass # mot de passe de l'utilisateur
+    ports: # port d'accès
+      - 8888:80
