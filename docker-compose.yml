@@ -34,3 +34,11 @@ services:
       - PMA_PASSWORD=pass # mot de passe de l'utilisateur
     ports: # port d'accès
       - 8888:80
+
+  composer:
+    image: composer:latest
+    container_name: composer
+    volumes:
+      - ./code:/app
+    working_dir: /app
+    command: composer install
