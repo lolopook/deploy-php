@@ -14,36 +14,38 @@ require('./vendor/autoload.php');
 // // - CV (int)
 
 
-// $voitures = [
-//     [
-//         "marque"    => "Alfa Romeo",
-//         "modele"    => "Giuletta",
-//         "cylindree" => 1700,
-//         "moteur"    => "Diesel",
-//         "cv"        => 160
-//     ],
-//     [
-//         "marque"    => "Ford",
-//         "modele"    => "Transit",
-//         "cylindree" => 1450,
-//         "moteur"    => "Essence",
-//         "cv"        => 110
-//     ],
-//     [
-//         "marque"    => "Peugeot",
-//         "modele"    => "Partner",
-//         "cylindree" => 1800,
-//         "moteur"    => "Diesel",
-//         "cv"        => 115
-//     ],
-//     [
-//         "marque"    => "Volkswagen",
-//         "modele"    => "Polo",
-//         "cylindree" => 1800,
-//         "moteur"    => "Essence",
-//         "cv"        => 125
-//     ]
-// ];
+$voitures = [
+    [
+        "marque"    => "Alfa Romeo",
+        "modele"    => "Giuletta",
+        "cylindree" => 1700,
+        "moteur"    => "Diesel",
+        "cv"        => 160
+    ],
+    [
+        "marque"    => "Ford",
+        "modele"    => "Transit",
+        "cylindree" => 1450,
+        "moteur"    => "Essence",
+        "cv"        => 110
+    ],
+    [
+        "marque"    => "Peugeot",
+        "modele"    => "Partner",
+        "cylindree" => 1800,
+        "moteur"    => "Diesel",
+        "cv"        => 115
+    ],
+    [
+        "marque"    => "Volkswagen",
+        "modele"    => "Polo",
+        "cylindree" => 1800,
+        "moteur"    => "Essence",
+        "cv"        => 125
+    ]
+];
+
+dump($voilies);
 
 // // EFFECTUER UNE BOUCLE QUI AFFICHERA : 
 //     // "Le véhicule $MARQUE $MODELE ($CYL cm3) de $CV chevaux est un $MOTEUR"

@@ -1,17 +1,18 @@
 {
-    "name": "anthony/php",
-    "description": "A git repo for practice PHP",
-    "authors": [
-        {
-            "name": "Anthony Merlier",
-            "email": "webmaster@consor.fr"
-        }
-    ],
-    "require": {
-        "nesbot/carbon": "^2.46",
-        "guzzlehttp/guzzle-services": "^1.2"
-    },
-    "require-dev": {
-        "mmucklo/krumo": "^0.6.1"
+  "name": "anthony/php",
+  "description": "A git repo for practice PHP",
+  "authors": [
+    {
+      "name": "Anthony Merlier",
+      "email": "webmaster@consor.fr"
     }
+  ],
+  "require": {
+    "nesbot/carbon": "^2.46",
+    "symfony/var-dumper": "^7.0.4",
+    "guzzlehttp/guzzle-services": "^1.2"
+  },
+  "require-dev": {
+    "mmucklo/krumo": "^0.6.1"
+  }
 }
