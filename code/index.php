@@ -45,7 +45,7 @@ $voitures = [
     ]
 ];
 
-dump($voilies);
+dump($voitures);
 
 // // EFFECTUER UNE BOUCLE QUI AFFICHERA : 
 //     // "Le véhicule $MARQUE $MODELE ($CYL cm3) de $CV chevaux est un $MOTEUR"
